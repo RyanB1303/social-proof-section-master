@@ -1,0 +1,146 @@
+// width
+$mobile: 35px;
+$desktop: 1440px;
+$veryDarkMagenta: hsl(300, 43%, 22%);
+$softPink: hsl(333, 80%, 67%);
+$darkGrayishMagenta: hsl(303, 10%, 53%);
+$lightGrayishMagenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+// fontsize
+$copy: 15px;
+//family spartan
+// weight 400 500 700
+* {
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  max-width: $desktop;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  background-image: url(./images/bg-pattern-top-desktop.svg),
+    url(./images/bg-pattern-bottom-mobile.svg);
+  background-position: top, bottom;
+  background-repeat: no-repeat, no-repeat;
+  padding: 165px 125px;
+}
+
+.section--top {
+  display: grid;
+  grid-template-columns: 0.8fr 2fr;
+  .banner {
+    width: 135%;
+    h1 {
+      color: $veryDarkMagenta;
+      font-size: 42px;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    span {
+      color: $darkGrayishMagenta;
+      font-size: $copy;
+      font-weight: 400;
+    }
+  }
+  .review-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-end;
+    // grid-template-columns: 1fr;
+    // grid-template-rows: 1fr 1fr 1fr;
+    .review {
+      display: flex;
+      justify-content: center;
+      border: 0.5px;
+      background-color: $lightGrayishMagenta;
+      border-radius: 5px;
+      width: 445px;
+      margin-bottom: 15px;
+      padding: 20px;
+      column-gap: 30px;
+      .review-comment {
+        color: $veryDarkMagenta;
+        font-weight: 700;
+      }
+    }
+    .review-1 {
+      align-self: center;
+    }
+    .review-2 {
+      align-self: center;
+      // margin-left: 18%;
+      margin-left: 9vw;
+    }
+    .review-3 {
+      align-self: center;
+      // margin-left: 22%;
+      margin-left: 18vw;
+    }
+  }
+}
+
+.section--bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .card {
+    width: 338px;
+    height: 212px;
+    background-color: $veryDarkMagenta;
+    color: $white;
+    border-radius: 5px;
+    border: 1px solid $veryDarkMagenta;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    .card-top {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+      .card-image {
+        img {
+          border-radius: 50%;
+          width: 42px;
+        }
+      }
+      .card-reviewer-name {
+        font-weight: 500;
+        color: $white;
+        margin-left: 20px;
+        font-size: $copy;
+        padding-top: 10px;
+        p {
+          color: $softPink;
+          font-weight: normal;
+          margin-top: 10px;
+        }
+      }
+    }
+    .card-bottom {
+      font-size: $copy;
+      font-weight: 400;
+    }
+  }
+}
+.card-2 {
+  margin-top: 5%;
+}
+.card-3 {
+  margin-top: 10%;
+}
+
+footer {
+  position: static;
+}
